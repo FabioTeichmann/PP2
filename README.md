@@ -71,7 +71,8 @@ Try accessing the `return_value` identifier without prepending `$`.
 **What happens and why?**
 
 <details>
-    <summary>You Answer</summary>
+    <summary>Es wird der Text return_value ausgegeben, da die Shell ohne das $ nicht weiß,dassman auf eine Variable zugreifen möchte. </summary>
+    
     ......
 </details>
 
@@ -300,7 +301,7 @@ cat ./function
 
 **What happend?**
 <details>
-    <summary>Your Explaination</summary>
+    <summary>mit ">" wird der Befehl gespeichert oder eine vorhandener überschrieben. Benutzt man ">>" wird der Befehl zusätzlich hinzugefügt und der vorherige Befehl wird dadurch nicht überschrieben.</summary>
     .....
 
 </details>
@@ -343,7 +344,7 @@ You can use a shorthand within your calls to add this string as a prefix to any 
 
 **Look at task 6 again. What is the complete filepath of your functions file?**
 <details>
-    <summary>Your Answer</summary>
+    <summary>/mnt/c/WINDOWS/system32/function</summary>
     ....
 </details>
 
@@ -367,7 +368,15 @@ cd /
 ```
 **Run `ls` again and insert the content here:**
 <details>
-    <summary>Your Answer</summary>
+    <summary>total 28
+drwxr-x--- 4 fabioteichmann fabioteichmann 4096 Apr 15 16:29 .
+drwxr-xr-x 3 root           root           4096 Apr 15 16:28 ..
+-rw-r--r-- 1 fabioteichmann fabioteichmann  220 Apr 15 16:28 .bash_logout
+-rw-r--r-- 1 fabioteichmann fabioteichmann 3771 Apr 15 16:28 .bashrc
+drwx------ 2 fabioteichmann fabioteichmann 4096 Apr 15 16:29 .cache
+drwxr-xr-x 2 fabioteichmann fabioteichmann 4096 Apr 15 16:29 .landscape
+-rw-r--r-- 1 fabioteichmann fabioteichmann    0 Apr 15 16:29 .motd_shown
+-rw-r--r-- 1 fabioteichmann fabioteichmann  807 Apr 15 16:28 .profile</summary>
     ....
 </details>
 
@@ -382,7 +391,26 @@ Use `rm` to delete a file and `rm -rf` to delete a directory.
 
 **Add a directory into your `~` dir and create an empty file in it. Delete the directory again.**
 <details>
-    <summary>Your Terminal Output</summary>
+    
+    <summary>
+    fabioteichmann@Flipbook:~$ cd 
+fabioteichmann@Flipbook:~$ pwd
+/home/fabioteichmann
+fabioteichmann@Flipbook:~$ mkdir Notiz
+fabioteichmann@Flipbook:~$ cd Notiz
+fabioteichmann@Flipbook:~/Notiz$ pwd
+/home/fabioteichmann/Notiz
+fabioteichmann@Flipbook:~/Notiz$ touch Datei.txt
+fabioteichmann@Flipbook:~/Notiz$ ls -la
+total 8
+drwxr-xr-x 2 fabioteichmann fabioteichmann 4096 Apr 15 16:49 .
+drwxr-x--- 5 fabioteichmann fabioteichmann 4096 Apr 15 16:48 ..
+-rw-r--r-- 1 fabioteichmann fabioteichmann    0 Apr 15 16:49 Datei.txt
+fabioteichmann@Flipbook:~/Notiz$ cd ~
+fabioteichmann@Flipbook:~$ rm -rf Notiz
+fabioteichmann@Flipbook:~$ ls
+fabioteichmann@Flipbook:~$
+    </summary>
 ```bash
 your terminal output
 ```
@@ -438,7 +466,9 @@ When you finished that tutorial, open a file in your home directory and manipula
 
 **How do you save a buffer to a new filename from within `vim`?**
 <details>
-    <summary>Your Answer</summary>
+    <summary>Mit dem Befehl :w (Dateinamen) speichert man seine Änderungen unter einem gewünschtem Namen ab.
+             Mit :wq (Dateinamen) speichert man die Datei und verlässt gleichzeitig das Programm.
+        (durch die Bearbeitungsdauer von 90min kam ich nur bis 2.5 aus der vimtutor) <ENTER></summary>
     .....
 </details>
  
